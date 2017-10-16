@@ -1,8 +1,9 @@
 # Indeed-Job-Data-Webscrape
 Python program to scrape Indeed job page for job market data.
 _____
-getFullData(cityName); takes a string input of a city name and returns a matrix containing job market
+getFullData(cityName); takes a string input of a (US) city name and returns a matrix containing job market
 data scraped from the Indeed page for that city.
+
 
 ex.
 
