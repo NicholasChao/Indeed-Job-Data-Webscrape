@@ -60,7 +60,8 @@ def getFullData(cityName):
     return array
 
 
-# this function will convert out data into a spreadsheet
+# this function will convert our data into a spreadsheet and save it as an
+# .xls file title 'workBook.xls'
 
 def getSpreadSheet(data):
     workbook = xlwt.Workbook()
