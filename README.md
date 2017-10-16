@@ -32,7 +32,8 @@ getFullData('boston') returns:
  
  ex.
  
- dataset = getFullData('boston') + getFullData('new-york') + getFullData('chicago')
+ dataset = getFullData('boston') + getFullData('new-york') + getFullData('chicago');
+ 
  getSpreadSheet(dataset)
  
  
