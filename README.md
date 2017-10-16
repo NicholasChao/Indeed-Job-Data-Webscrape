@@ -37,5 +37,4 @@ getFullData('boston') returns:
  
  getSpreadSheet(dataset)
  
- #One Possible Issue: The spreadsheet converter does not check to ensure that salary quintiles of cities are of the same dollar value.
- #As a result, a high salary in a higher-paying city will be in the same quintile as the lower salary in lower paying cities.
+ #One Possible Issue: The spreadsheet converter does not check to ensure that salary quintiles of cities are of the same dollar value. As a result, a high salary in a higher-paying city will be in the same quintile as the lower salary in lower paying cities.
