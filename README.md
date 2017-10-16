@@ -1,4 +1,4 @@
-# Indeed-Job-Data-Webscrape
+# Indeed-Job-Data-Webscrape NOTE: There is one issue that needs to be worked out, see bottom for more details.
 Python program to scrape Indeed job page for job market data.
 _____
 getFullData(cityName); takes a string input of a (US) city name and returns a matrix containing job market
@@ -36,4 +36,5 @@ getFullData('boston') returns:
  
  getSpreadSheet(dataset)
  
- 
+ #The spreadsheet converter does not check to ensure that salary quintiles of cities are of the same dollar value.
+ #As a result, a high salary in a higher-paying city will be in the same quintile as the lower salary in lower paying cities.
