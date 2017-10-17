@@ -8,7 +8,7 @@ Created on Thu Oct 12 22:45:46 2017
 
 import requests
 from bs4 import BeautifulSoup
-import xlwt
+import pandas as pd
 
 
 # Note: for cities whose name consists of more than
@@ -60,29 +60,11 @@ def getFullData(cityName):
     return array
 
 
-# this function will convert our data into a spreadsheet and save it as an
-# .xls file title 'workBook.xls'
+# this function will convert our data into a spreadsheet, organized with one row per city, and salary levels broken into quintiles rather than the actual dollar amount.
+# It then saves it as an .xls file title 'jobData.csv'. (NOTE: Bug that needs to be worked out. 
 
 def getSpreadSheet(data):
-    workbook = xlwt.Workbook()
-    sheet = workbook.add_sheet('sheet1')
-    k = 1
-    for i in range(len(data)):
-        if i%14 == 0:
-            sheet.write(k, 0, data[i][0])
-            k+=1
-    x = 1
-    j = 1
-    for i in range(len(data)):
-        sheet.write(x, j, data[i][2])
-        j+=1
-        if (i+1)%14 == 0:
-            x += 1
-            j = 1
-    for i in range(14):
-        sheet.write(0, i+1, data[i][1])
-    workbook.save("workBook.xls")
-
-          
+    df = pd.DataFrame(data)
+    df.to_csv('jobData.csv')
 
 
